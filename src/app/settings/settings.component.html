@@ -1,0 +1,47 @@
+<app-page-header [pageTitle]='pageName'></app-page-header>
+
+<form class="example-form">
+
+    <table  cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Hostname" [(ngModel)]="messengerConfig.hostname" name="hostname">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Port" [(ngModel)]="messengerConfig.port" name="port">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Display name1" [(ngModel)]="messengerConfig.displayName" name="displayName">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Chat ID" [(ngModel)]="messengerConfig.chatId" name="chatId">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Chat name" [(ngModel)]="messengerConfig.chatName" name="chatName">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button mat-raised-button color="primary" (click)="saveMessengerConfig()">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>

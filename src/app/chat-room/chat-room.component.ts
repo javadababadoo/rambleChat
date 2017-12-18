@@ -15,15 +15,15 @@ export class ChatRoomComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.chat = {
+/*     this.chat = {
       id: 1,
       name: 'chat ejemplo',
       messages: ['Prueba1', 'Prueba2', 'Prueba3']
-    };
+    }; */
   }
 
   sendMessage() {
-    console.log('Sending message...');
+    console.log('Sending message... ' + this.chat);
   }
 
 }

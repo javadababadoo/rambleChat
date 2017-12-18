@@ -28,8 +28,6 @@ export class SettingsComponent implements OnInit {
 
     this.messengerService.configureConnection();
     this.messengerService.reconnect();
-    this.messengerService.register();
-
 
     this.snackBar.open('Saved configuration', '', {
       duration: 3000

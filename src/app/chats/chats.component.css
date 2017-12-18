@@ -20,3 +20,25 @@
   height: 89%;
   margin-left: 10px;
 }
+
+.chat-room-div mat-list {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.chat-room-div .mat-list-item-ripple.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+.chat-room-div .mat-list-item-ripple:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}

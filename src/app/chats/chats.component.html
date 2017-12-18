@@ -10,7 +10,7 @@
   <div class="chat-room-div">
     <mat-list>
       <h3 mat-subheader>Rooms</h3>
-      <mat-list-item *ngFor="let chatRoom of chatRooms">
+      <mat-list-item *ngFor="let chatRoom of messengerService.chatRooms" [class.selected]="chatRoom === selectedChat" (click)="onChatSelected(chatRoom)">
         <mat-icon mat-list-icon>face</mat-icon>
         <h4 mat-line>{{chatRoom.name}}</h4>
         <mat-divider></mat-divider>
@@ -19,6 +19,6 @@
   </div>
 
   <div class="chat-div">
-    <app-chat-room></app-chat-room>
+    <app-chat-room [chat]="selectedChat"></app-chat-room>
   </div>
 </div>

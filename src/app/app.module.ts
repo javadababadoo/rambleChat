@@ -7,15 +7,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
 import { EventsComponent } from './events/events.component';
-import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MessengerService } from './messenger.service';
+// import { MessengerService, mqttServiceFactory } from './messenger.service';
 import { FormsModule } from '@angular/forms';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { EventLogService } from './event-log.service';
+import { MessengerService } from './messenger.service';
+import { ChatsComponent } from './chats/chats.component';
+import { ChatRoomComponent } from './chat-room/chat-room.component';
+/* import {
+  MqttMessage,
+  MqttModule,
+  MqttService
+} from 'ngx-mqtt'; */
+
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'chat-rooms', component: ChatRoomComponent },
+  { path: 'chats', component: ChatsComponent },
   { path: 'events', component: EventsComponent },
   { path: 'settings', component: SettingsComponent }
 ];
@@ -26,8 +35,9 @@ const appRoutes: Routes = [
     EventsComponent,
     SettingsComponent,
     DashboardComponent,
-    ChatRoomComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    ChatsComponent,
+    ChatRoomComponent
   ],
   imports: [
     FormsModule,
@@ -36,7 +46,10 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [MediaMatcher, MessengerService],
+  providers: [
+    MediaMatcher,
+    MessengerService,
+    EventLogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

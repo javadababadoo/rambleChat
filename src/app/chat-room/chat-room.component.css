@@ -1,0 +1,24 @@
+.chat-room-messages{
+  height: 89%;
+  width: 100%
+}
+
+.chat-room-input{
+  height: 9%;
+  width: 100%
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.message-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.full-width {
+  width: 95%;
+}

@@ -1,3 +1,4 @@
+<div>
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <button mat-icon-button (click)="snav.toggle()">
@@ -8,8 +9,8 @@
     <button mat-icon-button color="foreground" matTooltip="Dashboard" routerLink="/">
       <mat-icon aria-label="Dashboard">dashboard</mat-icon>
     </button>
-    <button mat-icon-button color="foreground" matTooltip="Chat rooms" routerLink="/chat-rooms">
-      <mat-icon aria-label="Chat rooms">chats</mat-icon>
+    <button mat-icon-button color="foreground" matTooltip="Chats" routerLink="/chats">
+      <mat-icon aria-label="Chats">chats</mat-icon>
     </button>
     <button mat-icon-button color="foreground" matTooltip="Events" routerLink="/events">
       <mat-icon aria-label="Events">notifications</mat-icon>
@@ -19,6 +20,7 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
+</div>
 <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
   <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
     <mat-nav-list>

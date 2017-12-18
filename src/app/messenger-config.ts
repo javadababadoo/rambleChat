@@ -1,6 +1,6 @@
 export class MessengerConfig {
     hostname: string;
-    port: string;
+    port: number;
     username: string;
     password: string;
     displayName: string;
